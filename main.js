@@ -34,42 +34,7 @@ function time(){
 time();
 setInterval( time , 1000) // 1 sec me refresh hona
 
-function time2(){   
-
-    var date = new Date();  // Date object to be created 
-
-    var hrs = date.getHours();  // 24 hrs 
-    var min = date.getMinutes();
-    var sec = date.getSeconds();
-    var AMPM = '' ;     // string variable 
-
-
-    
-    
-    document.getElementById('mins2').innerText = min + '\n'+ ' mins';
-    document.getElementById('sec2').innerText = sec + '\n'+' secs';
-    
-
-    if (hrs > 12 ){
-        hrs =  hrs - 12  ;
-        AMPM = 'PM';  // 
-        document.getElementById('hours2').innerText = hrs +   '\n'+ ' hour';
-        document.getElementById('AMPM2').innerText = AMPM;
-
-    }
-    else {
-        document.getElementById('hours2').innerText = hrs +   '\n'+ ' hour';
-        AMPM = 'AM';
-        document.getElementById('AMPM2').innerText = AMPM;
-    }
- 
-
-    
-}
-
-time2();
-setInterval( time2 , 1000)
-
+//
  
 
 // For image Changing Code 
@@ -78,28 +43,28 @@ function getTimeDetails(){
 
 
     // For time Calculation 
-    var date = new Date();
-    var hrs = date.getHours();
-    var min = date.getMinutes();
-    var sec = date.getSeconds();
-    var AMPM = '' ;   
+    var date1 = new Date();
+    var hrs1 = date1.getHours();
+    var min1 = date1.getMinutes();
+    var sec1 = date1.getSeconds();
+    var AMPM1 = '' ;   
     
-    document.getElementById('mins').innerText = min + '\n'+ ' mins';
-    document.getElementById('sec').innerText = sec + '\n'+' secs';
+    document.getElementById('mins').innerText = min1 + '\n'+ ' mins';
+    document.getElementById('sec').innerText = sec1 + '\n'+' secs';
     
   
 
-    if ( hrs > 12 ){
-        hrs =  hrs - 12  ;
-        AMPM = 'PM';
-        document.getElementById('hours').innerText = hrs +   '\n'+ ' hour';
-        document.getElementById('AMPM').innerText = AMPM;
+    if ( hrs1> 12 ){
+        hrs1 =  hrs1 - 12  ;
+        AMPM1 = 'PM';
+        document.getElementById('hours').innerText = hrs1 +   '\n'+ ' hour';
+        document.getElementById('AMPM').innerText = AMPM1;
 
     }
     else {
-        document.getElementById('hours').innerText = hrs +   '\n'+ ' hour';
-        AMPM = 'AM';
-        document.getElementById('AMPM').innerText = AMPM;
+        document.getElementById('hours').innerText = hrs1 +   '\n'+ ' hour';
+        AMPM1= 'AM';
+        document.getElementById('AMPM').innerText = AMPM1;
     }
  
 
@@ -132,12 +97,12 @@ function getTimeDetails(){
     var img = '';
    // 7AM === 7AM
 
-    if ( (arrWakeTime[0] === arrLunchTime[0]  === arrNapTime[0] ===  arrNightTime [0]) === (hrs+AMPM) ){
+    if ( (arrWakeTime[0] === arrLunchTime[0]  === arrNapTime[0] ===  arrNightTime [0]) === (hrs1+AMPM1) ){
         console.log("Yes all the times are equal so displaying the welcome home image  ");
         img = "<img  src='assets/welcomeHome.jpg' alt=''></img>"
     }
 
-   else if (arrWakeTime[0] === (hrs+AMPM)){
+   else if (arrWakeTime[0] === (hrs1+AMPM1)){
             img = "<img  src='assets/cpmponent 30-1.svg.png' alt=''>"
             document.getElementById('imageTag').innerHTML  = img;
             document.getElementById('grabSomeBreakfastheading').innerText ="GRAB SOME HEALTHY BREAKFAST    !!!. ";
@@ -152,7 +117,7 @@ function getTimeDetails(){
 
    }
 
-   else if (arrLunchTime[0] === (hrs+AMPM)){
+   else if (arrLunchTime[0] === (hrs1+AMPM1)){
         img = "<img  src='assets/Component 31 – 1.svg' alt=''>"
         document.getElementById('imageTag').innerHTML  = img;
         document.getElementById('grabSomeBreakfastheading').innerText ="LET'S HAVE SOME LUNCH     !!.  ";
@@ -165,7 +130,7 @@ function getTimeDetails(){
    }
 
 
-   else if (arrNapTime[0] === (hrs+AMPM)){
+   else if (arrNapTime[0] === (hrs1+AMPM1)){
     img = "<img  src='assets/evening.png' alt=''>"
     document.getElementById('imageTag').innerHTML  = img;
     document.getElementById('grabSomeBreakfastheading').innerText ="STOP YAWNING, GET SOME TEA.. ITS JUST EVENING  !!!   ";
@@ -178,7 +143,7 @@ function getTimeDetails(){
     }
 
 
-    else if (arrNightTime[0] === (hrs+AMPM))
+    else if (arrNightTime[0] === (hrs1+AMPM1))
     {
         img = "<img  src='assets/night.png' alt=''>"
         document.getElementById('imageTag').innerHTML  = img;
@@ -223,8 +188,7 @@ function getTimeDetails(){
     // Testing purpose 
     
     
-    console.log(hrs);
-    console.log(AMPM);
+
 
 
 
@@ -334,7 +298,7 @@ function getIamgeChangeForMobile(){
    }
 
    else if (arrLunchTimeMobile[0] === (hrs+AMPM)){
-        img = "<img  src='assets/Component 31 – 1.svg' alt=''>"
+        img = "<img class='imageCurtains' src='assets/Component 31 – 1.svg' alt=''>"
         document.getElementById('imageTag').innerHTML  = img;
         document.getElementById('grabSomeBreakfastheading').innerText ="LET'S HAVE SOME LUNCH     !!.  ";
         document.getElementById('messageParaAsPerTime').innerText ="GOOD AFTERNOON !! TAKE SOME SLEEP   !!!!!.  ";
@@ -347,7 +311,7 @@ function getIamgeChangeForMobile(){
 
 
    else if (arrNapTimeMobile[0] === (hrs+AMPM)){
-    img = "<img  src='assets/evening.png' alt=''>"
+    img = "<img class='imageCurtains' src='assets/evening.png' alt=''>"
     document.getElementById('imageTag').innerHTML  = img;
     document.getElementById('grabSomeBreakfastheading').innerText ="STOP YAWNING, GET SOME TEA.. ITS JUST EVENING  !!!   ";
     document.getElementById('messageParaAsPerTime').innerText ="GOOD EVENING    !!  .";
@@ -361,15 +325,14 @@ function getIamgeChangeForMobile(){
 
     else if (arrNightTimeMobile[0] === (hrs+AMPM))
     {
-        img = "<img  src='assets/night.png' alt=''>"
+        img = "<img class='imageCurtains' src='assets/night.png' alt=''>"
         document.getElementById('imageTag').innerHTML  = img;
         document.getElementById('grabSomeBreakfastheading').innerText
          ="CLOSE YOUR EYES AND GO TO SLEEP !!!!!.";
          document.getElementById('messageParaAsPerTime').innerText="GOOD NIGHT   !!  .. ";
     
 
-        document.getElementById('imageCurtains').style.height ='100%'
-        document.getElementById('imageCurtains').style.width ='30%'
+       
 
 
         console.log("Yes they  is our night time  ")

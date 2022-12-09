@@ -5,7 +5,6 @@
 }
 
 #mainBodyFlexItems1{
-   /* background-color: aqua; */
     width: 50vw;
     margin: 1.5%;
     height: 100%;
@@ -148,7 +147,7 @@ body{
     
 }
 
-#timeDiv2{
+ #timeDiv2{
     text-align: center;
     vertical-align: middle;
     display: flex;
@@ -157,7 +156,7 @@ body{
     border-radius: 5px;   
     display: none;
     
-}
+} 
 
 
 #timeText{
@@ -174,7 +173,7 @@ body{
 }
 
 
-#timeText2{
+ #timeText2{
     text-align: center;
     vertical-align: middle;
     height: auto;
@@ -185,7 +184,7 @@ body{
     margin: auto;
     color:#3D087B;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+} 
 
 #hours{
     text-align: center;
@@ -200,7 +199,7 @@ body{
 }
 
 
-#hours2{
+ #hours2{
     text-align: center;
     vertical-align: middle;
     background-color: #F6E2FF;
@@ -210,7 +209,7 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 1px 1vw ;
     padding-top: 4%;
-}
+} 
 
 #mins{
     text-align: center;
@@ -225,7 +224,7 @@ body{
 }
 
 
-#mins2{
+ #mins2{
     text-align: center;
     vertical-align: middle;
     background-color: #F6E2FF;
@@ -235,7 +234,7 @@ body{
     color:#3D087B;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 1px 1vw ;
-}
+} 
 
 #sec{
     text-align: center;
@@ -249,7 +248,7 @@ body{
     margin: 1px 1vw ;
 }
 
-#sec2{
+ #sec2{
     text-align: center;
     vertical-align: middle;
     background-color: #F6E2FF;
@@ -259,17 +258,17 @@ body{
     padding-top: 4%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 1px 1vw ;
-}
+} 
 
 .colon{
     padding-top: 6.5%;
     font-size: x-large;
 }
 
-.colon2{
+ .colon2{
     padding-top: 6.5%;
     font-size: x-large;
-}
+} 
 
 #AMPM{
     text-align: center;
@@ -287,7 +286,7 @@ body{
 }
 
 
-#AMPM2{
+ #AMPM2{
     text-align: center;
     vertical-align: middle;
     background-color: #F6E2FF;
@@ -300,7 +299,7 @@ body{
     background: url('assets/Duration.png');
     background-repeat: no-repeat;
     background-size: cover;
-}
+} 
 
 #grabSomeBreakfast{
     background-color:  #FFFFFF;
@@ -327,8 +326,8 @@ body{
 }
 
 
-#imageCurtains{
-    height: 100% ;
+.imageCurtains{
+
     width: 100%;
     border-radius: 5px;
 }
@@ -350,7 +349,9 @@ body{
     gap: 8px;
     display: none;
 }
-
+#imageTag{
+    width: 100%;
+}
 
 
 
@@ -365,9 +366,7 @@ body{
     display: none;
 }
 
-#imageTag{
-    height: 50vh;
-}
+
 
 #allIcons{
     display: grid;
